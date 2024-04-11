@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LineHeight202404 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "LineHeight202404 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
