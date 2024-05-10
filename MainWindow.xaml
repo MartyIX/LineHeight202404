@@ -8,9 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Border Background="DimGray">
-            <TextBlock LineHeight="50" Text="BEHAVIOR DIFFERENCE" />
-        </Border>
-    </StackPanel>
+    <Border BorderBrush="White" BorderThickness="4" Height="108" Width="64">
+        <TextBlock Text="Test"/>
+    </Border>
 </Window>
