@@ -8,9 +8,174 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Border Background="DimGray">
-            <TextBlock LineHeight="50" Text="BEHAVIOR DIFFERENCE" />
-        </Border>
-    </StackPanel>
+    <ScrollView>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            <Border Background="DimGray" Height="Auto">
+                <TextBlock Text="Test text #1: TextLineBounds=Tight" LineHeight="50" TextLineBounds="Tight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" />
+            </Border>
+
+            <Border Background="LightBlue" Height="Auto">
+                <TextBlock Text="Test text #2: TextLineBounds=Full" LineHeight="50" TextLineBounds="Full" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" />
+            </Border>
+
+            <Border Background="DimGray" Height="Auto">
+                <TextBlock Text="Test text #3: TextLineBounds=TrimToBaseline" LineHeight="50" TextLineBounds="TrimToBaseline" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" />
+            </Border>
+
+            <Border Background="LightBlue" Height="Auto">
+                <TextBlock Text="Test text #4: TextLineBounds=TrimToCapHeight" LineHeight="50" TextLineBounds="TrimToCapHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" />
+            </Border>
+
+            <Border Background="DimGray" Height="Auto">
+                <TextBlock Text="Test text #5: LineStackingStrategy=BaselineToBaseline" LineHeight="50" LineStackingStrategy="BaselineToBaseline" SelectionHighlightColor="AliceBlue"
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" />
+            </Border>
+
+            <Border Background="Firebrick" Height="Auto">
+                <TextBlock Text="Test text #5b: LineStackingStrategy=BaselineToBaseline, Padding=0,5" Padding="0,5" LineHeight="50" LineStackingStrategy="BaselineToBaseline" 
+                           SelectionHighlightColor="AliceBlue" IsTextSelectionEnabled="True" Foreground="Black" />
+            </Border>
+
+            <Border Background="Aquamarine" Height="Auto">
+                <TextBlock Padding="0,5" LineHeight="50" LineStackingStrategy="BaselineToBaseline" 
+                           SelectionHighlightColor="AliceBlue" IsTextSelectionEnabled="True" Foreground="Black">
+                    Test text #5c: LineStackingStrategy=BaselineToBaseline, Padding=0,5, multiline
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightBlue" Height="Auto">
+                <TextBlock Text="Test text #6: LineStackingStrategy=BlockLineHeight" LineHeight="50" LineStackingStrategy="BlockLineHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" />
+            </Border>
+
+            <Border Background="LightPink" Height="Auto">
+                <TextBlock Text="Test text #7: LineStackingStrategy=MaxHeight" LineHeight="50" LineStackingStrategy="MaxHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" />
+            </Border>
+
+            <Border Background="LightGray" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="MaxHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #8: TextWrapping=Wrap
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightBlue" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="MaxHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #9: TextWrapping=Wrap, LineStackingStrategy=MaxHeight 
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightGray" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="MaxHeight" TextLineBounds="Tight" 
+                           SelectionHighlightColor="AliceBlue"  IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #9b: TextWrapping=Wrap, LineStackingStrategy=MaxHeight, TextLineBounds=Tight
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightSkyBlue" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="MaxHeight" TextLineBounds="Full" 
+                           SelectionHighlightColor="AliceBlue"  IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #9c: TextWrapping=Wrap, LineStackingStrategy=MaxHeight, TextLineBounds=Full
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightSteelBlue" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="MaxHeight" TextLineBounds="TrimToCapHeight" 
+                           SelectionHighlightColor="AliceBlue"  IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #9d: TextWrapping=Wrap, LineStackingStrategy=MaxHeight, TextLineBounds=TrimToCapHeight
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightCoral" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BlockLineHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #10: TextWrapping=Wrap, LineStackingStrategy=BlockLineHeight 
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightGoldenrodYellow" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BlockLineHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" TextLineBounds="Full" >
+                    Test text #10b: TextWrapping=Wrap, LineStackingStrategy=BlockLineHeight, TextLineBounds=Full 
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightGray" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BlockLineHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" TextLineBounds="Tight" >
+                    Test text #10c: TextWrapping=Wrap, LineStackingStrategy=BlockLineHeight, TextLineBounds=Tight
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightPink" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BlockLineHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" TextLineBounds="TrimToBaseline" >
+                    Test text #10d: TextWrapping=Wrap, LineStackingStrategy=BlockLineHeight, TextLineBounds=TrimToBaseline
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightSeaGreen" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BlockLineHeight" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black" TextLineBounds="TrimToCapHeight" >
+                    Test text #10e: TextWrapping=Wrap, LineStackingStrategy=BlockLineHeight, TextLineBounds=TrimToCapHeight
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightGreen" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BaselineToBaseline" SelectionHighlightColor="AliceBlue" 
+                           IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #11: TextWrapping=Wrap, LineStackingStrategy=BaselineToBaseline
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightGray" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BaselineToBaseline" TextLineBounds="Full" 
+                           SelectionHighlightColor="AliceBlue"  IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #12: TextWrapping=Wrap, LineStackingStrategy=BaselineToBaseline, TextLineBounds=Full
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+
+            <Border Background="LightSalmon" Height="Auto">
+                <TextBlock TextWrapping="Wrap" LineHeight="50" LineStackingStrategy="BaselineToBaseline" TextLineBounds="Tight" 
+                           SelectionHighlightColor="AliceBlue" IsTextSelectionEnabled="True" Padding="0" Foreground="Black">
+                    Test text #13: TextWrapping=Wrap, LineStackingStrategy=BaselineToBaseline, TextLineBounds=Tight
+                     <LineBreak/>
+                    Second line
+                </TextBlock>
+            </Border>
+        </StackPanel>
+    </ScrollView>
 </Window>
